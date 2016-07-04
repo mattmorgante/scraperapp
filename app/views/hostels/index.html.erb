@@ -1,0 +1,66 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = new google.visualization.arrayToDataTable([
+          ['Price', 'Count'],
+          ['0-5', 0],
+          ['6-10', 0],
+          ['11-15', 0],
+          ['16-20', 0],
+          ['21-25', 2],
+          ['26-30', 6],
+          ['31-35', 5],
+          ['36-40', 3],
+          ['41-45', 1],
+          ['46-50', 2]
+        ]);
+
+        var data2 = new google.visualization.arrayToDataTable([
+          ['Price', 'Count'],
+          ['0-5', 0],
+          ['6-10', 19],
+          ['11-15', 29],
+          ['16-20', 20],
+          ['21-25', 16],
+          ['26-30', 2],
+          ['31-35', 3],
+          ['36-40', 0],
+          ['41-45', 1],
+          ['46-50', 0]
+        ]);
+
+        var options = {
+          chart: {
+            title: 'San Francisco',
+            subtitle: 'Average Price: $33.1 ',
+          }
+        };
+        var options2 = {
+          chart: {
+            title: 'Berlin',
+            subtitle: 'Average Price: $16.7',
+          }
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+        var chart2 = new google.charts.Bar(document.getElementById('chart_div2'));
+
+        chart.draw(data, options);
+        chart2.draw(data2, options2);
+      }
+    </script>
+
+  </head>
+  <body>
+    <h1>How much does it cost to sleep around the world?</h1>
+    <h3>All prices are scraped from Hostelworld as of July 2016 and all prices are in USD</h3>
+    <div container>
+      <div id="columnchart_material" style="width: 900px; height: 500px;"></div>
+      <div id="chart_div2" style="width: 900px; height: 500px;"></div>
+    </div>
+  </body>
+</html>

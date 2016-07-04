@@ -1,0 +1,4 @@
+Scraper of hostel prices
+
+* Make the charts inline
+* Remove the key (probably in the JS somewhere)
