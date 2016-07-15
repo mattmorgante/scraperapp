@@ -6,18 +6,19 @@
       google.charts.load('current', {'packages':['bar']});
       google.charts.setOnLoadCallback(drawChart);
       function drawChart() {
+        // LISBON
         var data = new google.visualization.arrayToDataTable([
           ['Price', 'Count'],
-          ['0-5', 0],
-          ['6-10', 0],
-          ['11-15', 0],
-          ['16-20', 0],
-          ['21-25', 2],
-          ['26-30', 6],
-          ['31-35', 5],
-          ['36-40', 3],
-          ['41-45', 1],
-          ['46-50', 2]
+          ['0-5', 2],
+          ['6-10', 16],
+          ['11-15', 44],
+          ['16-20', 22],
+          ['21-25', 4],
+          ['26-30', 2],
+          ['31-35', 0],
+          ['36-40', 0],
+          ['41-45', 0],
+          ['46-50', 0]
         ]);
         // BERLIN
         var data2 = new google.visualization.arrayToDataTable([
@@ -33,57 +34,57 @@
           ['41-45', 1],
           ['46-50', 0]
         ]);
-        // Bangkok
+        // BARCELONA
         var data3 = new google.visualization.arrayToDataTable([
           ['Price', 'Count'],
-          ['0-5', 4],
-          ['6-10', 64],
-          ['11-15', 21],
-          ['16-20', 1],
-          ['21-25', 0],
-          ['26-30', 0],
-          ['31-35', 0],
+          ['0-5', 0],
+          ['6-10', 19],
+          ['11-15', 35],
+          ['16-20', 21],
+          ['21-25', 8],
+          ['26-30', 4],
+          ['31-35', 3],
           ['36-40', 0],
           ['41-45', 0],
           ['46-50', 0]
         ]);
-        // GOA 
+        // STOCKHOLM 
         var data4 = new google.visualization.arrayToDataTable([
           ['Price', 'Count'],
-          ['0-5', 34],
-          ['6-10', 24],
-          ['11-15', 4],
-          ['16-20', 1],
-          ['21-25', 0],
-          ['26-30', 0],
-          ['31-35', 0],
-          ['36-40', 0],
-          ['41-45', 0],
-          ['46-50', 1]
+          ['0-5', 0],
+          ['6-10', 0],
+          ['11-15', 2],
+          ['16-20', 12],
+          ['21-25', 25],
+          ['26-30', 14],
+          ['31-35', 8],
+          ['36-40', 5],
+          ['41-45', 2],
+          ['46-50', 0]
         ]);
 
         var options = {
           chart: {
-            title: 'San Francisco, USA',
-            subtitle: 'Average Price: $33.11 ',
+            title: 'Lisbon, Portugal',
+            subtitle: 'Average Price: €13.78',
           }
         };
         var options2 = {
           chart: {
             title: 'Berlin, Germany',
-            subtitle: 'Average Price: $16.66',
+            subtitle: 'Average Price: €16.66',
           }
         };
         var options3 = { 
           chart: { 
-            title: 'Bangkok, Thailand', 
-            subtitle: 'Average Price: $9.21`'
+            title: 'Barcelona, Spain', 
+            subtitle: 'Average Price: €15.47`'
           }
         }
         var options4 = {
           chart: {
-            title: 'Goa, India',
-            subtitle: 'Average Price: $7.43',
+            title: 'Stockholm, Sweden',
+            subtitle: 'Average Price: €25.47',
           }
         };
 
@@ -107,43 +108,14 @@
   <body>
     <div class="container">
       <h1>How much does it cost to sleep around the world?</h1>
-
-      <div class="container"> 
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 equal">
-                <div class="col-lg-6">
-                    <div class="tag-box tag-box-v6 box-shadow shadow-effect-2"> 
-                        <div class="headline">
-                        <h4><%= link_to "Europe", {:controller => 'pages', :action => 'show'} %></h4>
-                        
-                    </div>
-                    <p>Lisbon</p>
-                    <p>Stockholm</p>
-                    <p>Berlin</p>
-                    <p>And more!</p>
-                </div>  
-            </div>
-            <div class="col-lg-6">
-                <div class="tag-box tag-box-v6 box-shadow shadow-effect-2">
-                <div class="headline">
-                    <h4>Asia</h4>
-                </div>
-                    <p>Bangkok</p>
-                    <p>text</p>
-                    <p>text</p>
-                    <p>text</p>
-                </div>
-            </div>
-        </div><!--2nd col-->
-    </div><!--offset wrapper col-->
-</div>
       <h3>All prices are scraped from Hostelworld as of July 2016 and all prices are in USD</h3>
 
       <div container>
         <div id="columnchart_material" style="width: 900px; height: 500px;"></div>
+        <div id="chart_div4" style="width: 900px; height: 500px;"></div>
         <div id="chart_div2" style="width: 900px; height: 500px;"></div>
         <div id="chart_div3" style="width: 900px; height: 500px;"></div>
-        <div id="chart_div4" style="width: 900px; height: 500px;"></div>
+        
       </div>
     </div>
   </body>

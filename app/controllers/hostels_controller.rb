@@ -1,5 +1,5 @@
 class HostelsController < ApplicationController
-  before_action :set_hostel, only: [:show, :edit, :update, :destroy]
+  before_action :set_hostel, only: [:edit, :update, :destroy]
 
   # GET /hostels
   # GET /hostels.json
